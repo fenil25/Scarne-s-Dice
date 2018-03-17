@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.fenil.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/your_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/current_score"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/current_score"
+        android:layout_marginTop="21dp"
+        android:fontFamily="sans-serif"
+        android:text="Your Score: "
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@android:color/background_light"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/current_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/your_score"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="13dp"
+        android:text="Your Current Score"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/computer_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/your_score"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
+        android:text="Computer's Score"
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
+        android:id="@+id/dice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/current_score"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/current_score"
+        android:layout_marginBottom="76dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:text="Roll" />
+
+    <Button
+        android:id="@+id/hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/roll"
+        android:layout_centerHorizontal="true"
+        android:text="Hold" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hold"
+        android:layout_alignBottom="@+id/hold"
+        android:layout_toEndOf="@+id/dice"
+        android:layout_toRightOf="@+id/dice"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/computer_current_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/current_score"
+        android:layout_alignLeft="@+id/computer_score"
+        android:layout_alignStart="@+id/computer_score"
+        android:text="PC Current Score: "
+        android:textColor="@android:color/background_light"
+        android:visibility="invisible" />/>
+
+</RelativeLayout>
